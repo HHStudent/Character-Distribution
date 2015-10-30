@@ -44,15 +44,18 @@ print('The distribution of characters in "{0}" is:'.format(s))
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 s1 = s.lower().strip('.')
 list1 = []
-var1 = 0
 
 for x in alphabet:
     n1 = s1.count(x)
-    
+    var1 = 0
+    list2 = []
+    while n1 > 0:
+        var1 += 1
+        if var1 = True:
+            stop += 1
 
 
-
-
+print(list1, list2)
 
 
 
