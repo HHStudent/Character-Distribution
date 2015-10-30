@@ -49,13 +49,12 @@ for x in alphabet:
     n1 = s1.count(x)
     var1 = 0
     list2 = []
-    while n1 > 0:
+    while var1 <= n1:
         var1 += 1
-        if var1 = True:
-            stop += 1
+        list2.append(x)
+    list1.append(list2)
+print(list1.sort())
 
-
-print(list1, list2)
 
 
 
