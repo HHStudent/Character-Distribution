@@ -36,31 +36,27 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-#s = str(input("Please enter a string of text (the bigger the better): "))
-s = ("The rain in Spain stays mainly in the plain.")
+s = str(input("Please enter a string of text (the bigger the better): "))
 
 print('The distribution of characters in "{0}" is:'.format(s))
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 s1 = s.lower().strip('.')
 list1 = []
+list2 = []
 
 for x in alphabet:
     n1 = s1.count(x)
-    var1 = 0
-    list2 = []
-    while var1 < n1 and n1 != 0:
-        var1 += 1
-        list2.append(x)
-    list1.append(list2)
-    list1.sort(key=len)
-    list3 = list(reversed(list1))
+    list1.append(n1)
 
-for x in list3:
+ziplist = list(zip(list1, alphabet))
+length = len(s1)
+
+while length > 0:
+    for x in ziplist:
+        if x[0] == length:
+            list2.append(x[1]*x[0])
+    length -= 1
+
+for x in list2:
     print(x)
-
-
-
-
-
-
